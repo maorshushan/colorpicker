@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <link href="styles/main.css" rel="stylesheet">
+
+  <title>Color Picker</title>
+</head>
+
+<body>
+  <div id="body">
+    <div id="header">
+      <button id="close-btn" class="control-btn"></button>
+      <button id="min-btn" class="control-btn"></button>
+    </div>
+    <div id="picker">
+      <div class="color-picker-panel">
+
+        <div class="panel-row">
+          <div class="spectrum-map">
+            <button id="spectrum-cursor" class="color-cursor"></button>
+            <canvas id="spectrum-canvas"></canvas>
+          </div>
+          <div class="hue-map">
+            <button id="hue-cursor" class="color-cursor"></button>
+            <canvas id="hue-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="card-bottom">
+      <span id="hex-title">HEX</span>
+      <svg id="color-preview" height="16" width="16">
+        <circle cx="8" cy="8" r="8" fill="red" />
+      </svg>
+      <span id="hex-value">value</span>
+      <br>
+      <span id="rgb-title">RGB</span>
+      <span id="rgb-value">value</span>
+      <div id="actions">
+        <img id="dropper" class="button-action" src="./assets/svg/dropper.svg" />
+        <img id="copy" class="button-action" src="./assets/svg/copy.svg" />
+        <img id="plus" class="button-action" src="./assets/svg/plus.svg" />
+      </div>
+    </div>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./scripts/index.js"></script>
+  <script src="renderer.js"></script>
+
+</body>
+
+</html>

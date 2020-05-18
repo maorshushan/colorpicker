@@ -1,0 +1,70 @@
+#color {
+    background: white;
+    height: 100px;
+    width: 100px;
+}
+
+#bottom {
+    background: white;
+    height: 50px;
+    width: 100px;
+    padding-top: 4px;
+    position: relative;
+}
+
+
+#bottom input {
+    border: 0;
+    font-family: 'Nunito';
+    color: rgb(134, 134, 134);
+    margin-left: 3px;
+    margin-top: 0px;
+    width: 97px;
+    outline: 0px;
+}
+
+#close {
+    height: 12px;
+    filter: opacity(0);
+    transition: filter 0.5s;
+    margin: 6px;
+    margin-top: 7px;
+}
+
+#move {
+    height: 15px;
+    filter: opacity(0);
+    transition: filter 0.5s;
+    margin: 6px;
+    float: right;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+}
+
+#color:hover #close {
+    filter: opacity(1);
+}
+
+#color:hover #move {
+    filter: opacity(1);
+}
+
+.invert {
+    filter: invert();
+}
+
+#copy-btn {
+    height: 13px;
+}
+
+#hex {
+    font-weight: 600;
+    font-size: 17px;
+    margin: 3px;
+}
+#copy-btn {
+    filter: invert();
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/Nunito-SemiBold.woff2') format('woff2'),
+        url('../assets/fonts/Nunito-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../assets/fonts/Nunito-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Nunito-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Nunito';
+  margin: 0px;
+  overflow: hidden;
+}
+
+#body {
+  background-color:#262626; 
+  width: 223px;
+  height: 315px;
+  overflow: hidden;
+  position: relative;
+}
+
+hr {
+   border-top: 1px solid rgba(0, 0, 0, 0.2);
+   border-bottom: none;
+   width: 97%;
+   margin-top: 0;
+}
+
+.control-btn {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  border: 1px solid;
+  margin-left: 3px;
+  margin-top: 7px;
+  margin-bottom: 6px;
+  outline: none;
+  -webkit-app-region: no-drag;
+}
+
+#close-btn {
+  margin-left: 6px;
+  border-color: rgb(224, 7, 7);
+  background-color: rgb(255, 53, 53);
+}
+
+#min-btn {
+  border-color: rgb(224, 184, 7);
+  background-color: rgb(255, 235, 53);
+}
+
+#header {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+
+
+
+
+.color-picker-panel {
+  width: 200px;
+  position: absolute;
+  top: 132px;
+  left: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.color-cursor {
+  border-radius: 100%;
+  background: #ccc;
+  box-sizing: border-box;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  border: 2px solid #fff;
+  transition: all .2s ease;
+}
+.color-cursor.dragging {
+  transition: none;
+}
+.color-cursor#spectrum-cursor {
+  width: 17px;
+  height: 17px;
+  margin-left: -10px;
+  margin-top: -10px;
+  top: 0;
+  left: 0;
+}
+.color-cursor#hue-cursor {
+  top: 0px;
+  height: 15px;
+  width: 15px;
+  margin-top: -10px;
+  margin-left: 20px;
+  pointer-events: none;
+}
+
+.spectrum-map {
+  position: relative;
+  width: 212px;
+  height: 212px;
+  overflow: hidden;
+}
+
+#spectrum-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+}
+
+.hue-map {
+  position: absolute;
+  top: 0px;
+  bottom: 5px;
+  right: 0px;
+  width: 11px;
+}
+
+#hue-canvas {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  left: 23px;
+  width: 100%;
+  height: 290px;
+  background: #ccc;
+}
+
+
+
+#card-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  color: white;
+  width: 85%;
+}
+
+#hex-title, #rgb-title {
+  float: left;
+}
+
+#hex-value, #rgb-value {
+  float: right;
+}
+
+#rgb-title, #rgb-value {
+  color: #737373;
+}
+
+#color-preview {
+  position: absolute;
+  bottom: -22px;
+  left: 0px;
+}
+
+#actions {
+  position: absolute;
+  right: 0px;
+  bottom: -28px;
+}
+
+.button-action {
+  height: 16px;
+  margin-left: 5px;
+  filter: opacity(0.4);
+  transition: filter 0.5s;
+}
+
+.button-action:hover {
+  filter: opacity(1);
+}
+
+.selected {
+  filter: opacity(1);
+}
